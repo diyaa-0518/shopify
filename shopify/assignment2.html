@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify-like Product Page</title>
+  <link rel="stylesheet" href="assignment2.css">
+</head>
+<body>
+  <div class="container">
+    <main class="product-page">
+      <!-- Product Image Gallery -->
+      <section class="image-gallery">
+        <div class="main-image">
+          <img id="mainImage" src="c:\Users\DELL\Pictures\Screenshots\shopping (4).webp" alt="Main Product">
+        </div>
+        <div class="thumbnails">
+          <img src="c:\Users\DELL\Pictures\Screenshots\shopping (9).webp" alt="Thumb 1" class="thumb active">
+          <img src="c:\Users\DELL\Pictures\Screenshots\shopping (6).webp" alt="Thumb 2" class="thumb">
+          <img src="c:\Users\DELL\Pictures\Screenshots\shopping (7).webp" alt="Thumb 3" class="thumb">
+          <img src="c:\Users\DELL\Pictures\Screenshots\shopping (8).webp" alt="Thumb 4" class="thumb">
+          
+        </div>
+      </section>
+
+      <!-- Product Details -->
+      <section class="product-details">
+        <h1>Classic Hoodie</h1>
+        <p class="price">599rs</p>
+
+        <!-- Product Variants -->
+        <div class="variants">
+          <div class="colors">
+            <label>Color:</label>
+            <button class="color-swatch" style="background:red" data-color="Red"></button>
+            <button class="color-swatch" style="background:blue" data-color="Blue"></button>
+            <button class="color-swatch" style="background:green" data-color="Green"></button>
+          </div>
+          <div class="sizes">
+            <label for="sizeSelect">Size:</label>
+            <select id="sizeSelect">
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+            <button id="sizeChartBtn">Size Chart</button>
+          </div>
+          <button id="compareColorsBtn">Compare Colours</button>
+        </div>
+
+        <button class="add-to-cart">Add to Cart</button>
+      </section>
+    </main>
+
+    <!-- Size Chart Modal -->
+    <div id="sizeChartModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Size Chart</h2>
+        <table>
+          <tr><th>Size</th><th>Chest</th><th>Length</th></tr>
+          <tr><td>S</td><td>34"</td><td>26"</td></tr>
+          <tr><td>M</td><td>38"</td><td>27"</td></tr>
+          <tr><td>L</td><td>42"</td><td>28"</td></tr>
+          <tr><td>XL</td><td>46"</td><td>29"</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Compare Colors Modal -->
+    <div id="compareColorsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Compare Colours</h2>
+        <div class="color-compare-swatches">
+          <div class="swatch" style="background:red"></div>
+          <div class="swatch" style="background:blue"></div>
+          <div class="swatch" style="background:green"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pair Well With -->
+    <section class="pair-well">
+      <h2>Pair Well With</h2>
+      <div class="carousel">
+        <div class="card"><img src="c:\Users\DELL\Pictures\Screenshots\shopping.webp"><h3>Joggers</h3><p>499rs</p><button>Add to Cart</button></div>
+        <div class="card"><img src="c:\Users\DELL\Pictures\Screenshots\shopping (1).webp"><h3>Cap</h3><p>100rs</p><button>Add to Cart</button></div>
+        <div class="card"><img src="c:\Users\DELL\Pictures\Screenshots\shopping (2).webp"><h3>Socks</h3><p>100rs</p><button>Add to Cart</button></div>
+      </div>
+    </section>
+
+    <!-- Product Bundle -->
+    <section class="bundle">
+      <h2>Buy These Together</h2>
+      <div class="bundle-products">
+        <div><img src="c:\Users\DELL\Pictures\Screenshots\61N2xDs4yRL.jpg"><p>Hoodie - 300rs</p></div>
+        <div><img src="c:\Users\DELL\Pictures\Screenshots\41LDSLJ9KiL._SY679_.jpg"><p>Joggers - 499rs</p></div>
+      </div>
+      <p class="total">Total: 799rs</p>
+      <button class="bundle-cart">Add Bundle to Cart</button>
+    </section>
+
+    <!-- Tabs -->
+    <section class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="desc">Description</button>
+        <button class="tab-btn" data-tab="info">Product Information</button>
+        <button class="tab-btn" data-tab="shipping">Shipping Details</button>
+      </div>
+      <div class="tab-content active" id="desc">Comfortable hoodie with a modern fit.</div>
+      <div class="tab-content" id="info">Made with 100% cotton. Machine washable.</div>
+      <div class="tab-content" id="shipping">Ships worldwide within 5 business days.</div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related">
+      <h2>Related Products</h2>
+      <div class="related-grid">
+        <div class="related-card"><img src="c:\Users\DELL\Pictures\Screenshots\31NjrmwyYmL.jpg"><span class="badge">New</span><h3>Zip Hoodie</h3><p>799rs</p></div>
+        <div class="related-card"><img src="c:\Users\DELL\Pictures\Screenshots\images.jpg"><h3>Beanie</h3><p>500rs</p></div>
+        <div class="related-card"><img src="c:\Users\DELL\Pictures\Screenshots\-1117Wx1400H-700374792-beige-MODEL.webp"><span class="badge">Popular</span><h3>Sneakers</h3><p>3999rs</p></div>
+        <div class="related-card"><img src="c:\Users\DELL\Pictures\Screenshots\shopping (3).webp"><h3>Denim Jacket</h3><p>1000rs</p></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
